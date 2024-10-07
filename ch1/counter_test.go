@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"testing"
 )
 
@@ -27,6 +28,7 @@ func TestCountBytes(t *testing.T) {
 	b := bytes.NewBufferString("asd")
 	exp := 3
 	res := count(b, false, true)
+	fmt.Println(count(b, false, true))
 	if res != exp {
 		t.Errorf("Expected %d got %d instead\n", exp, res)
 	}
